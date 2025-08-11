@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PickMovies — Encontre o filme de hoje</title>
+
+  <!-- Fontes & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand">
+        <h1>Pick<span>Movies</span></h1>
+        <p class="tag">Um filme escolhido para a sua noite</p>
+      </div>
+      <button id="btn-gerarFilme" class="btn" aria-label="Encontrar filme" onclick="filmeAleatorio()">🎬 Encontrar filme</button>
+    </header>
+
+    <section class="movie-area" aria-live="polite">
+      <div class="movie-card" id="movie-card" tabindex="0" aria-hidden="true">
+        <div class="poster-wrap">
+          <img id="capa" src="" alt="Capa do filme" />
+          <div class="shine"></div>
+        </div>
+        <div class="info">
+          <h2 id="nome-filme" class="title">—</h2>
+          <p id="descricao" class="description">Clique em "Encontrar filme" para ver a descrição.</p>
+          <div class="meta">
+            <span id="duration" class="chip"></span>
+            <span id="category" class="chip"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="loader" class="loader hidden" aria-hidden="true">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+      </div>
+
+      <div id="error" class="error hidden" role="alert"></div>
+    </section>
+
+    <footer class="footer">
+      <small>Feito com ♥ — GitHub: <a class="github" href="https://github.com/GabrielGSRosa">Gabriel Rosa</a></small>
+    </footer>
+  </main>
+
+  <script src="index.js" defer></script>
+</body>
+</html>
